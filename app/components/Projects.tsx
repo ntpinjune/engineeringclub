@@ -1,19 +1,23 @@
+import Link from 'next/link';
 import Image from 'next/image';
 
 const projects = [
     {
+        id: "cnc-router",
         title: "CNC Router",
         description: "A computer-controlled cutting machine built from scratch, capable of precision woodworking and metalworking.",
         image: "/images/cnc-router.png",
         buttonText: "View Details"
     },
     {
+        id: "rc-gokart",
         title: "RC GoKart",
         description: "A high-speed electric go-kart designed for competitive racing, featuring custom chassis design and powertrain optimization.",
         image: "/images/rc-gokart.png",
         buttonText: "Learn More"
     },
     {
+        id: "rc-plane",
         title: "RC Plane",
         description: "An advanced radio-controlled aircraft, showcasing principles of aerodynamics and lightweight construction.",
         image: "/images/rc-plane.png",
@@ -46,9 +50,12 @@ export default function Projects() {
                             <p className="text-gray-400 text-sm mb-6 line-clamp-3 flex-grow">
                                 {project.description}
                             </p>
-                            <button className="bg-[#262626] hover:bg-[#333] text-white text-xs px-4 py-2 rounded transition-colors border border-[#333] self-start">
+                            <Link
+                                href={`/projects?id=${project.id}`}
+                                className="bg-[#262626] hover:bg-[#333] text-white text-xs px-4 py-2 rounded transition-colors border border-[#333] self-start inline-block"
+                            >
                                 {project.buttonText}
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 ))}
