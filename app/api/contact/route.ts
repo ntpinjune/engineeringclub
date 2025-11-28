@@ -15,9 +15,6 @@ export async function POST(request: Request) {
 
         // Configure the email transporter
         // This uses environment variables that you (the user) will set in .env.local
-        console.log("Debug: EMAIL_USER is", process.env.EMAIL_USER ? "defined" : "undefined");
-        console.log("Debug: EMAIL_PASS is", process.env.EMAIL_PASS ? "defined" : "undefined");
-
         const transporter = nodemailer.createTransport({
             service: 'gmail', // You can change this if using another provider like Outlook or SendGrid
             auth: {

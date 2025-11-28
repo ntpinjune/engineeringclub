@@ -45,7 +45,7 @@ export default function ContactPage() {
             <div className="max-w-3xl mx-auto px-4 py-16 text-center">
                 <h1 className="text-4xl font-bold mb-6">Contact Us</h1>
                 <p className="text-gray-400 mb-12">
-                    We'd love to hear from you! Whether you have questions about our club, projects, or events, feel free to reach out using the form below or connect with us on social media.
+                    We&apos;d love to hear from you! Whether you have questions about our club, projects, or events, feel free to reach out using the form below or connect with us on social media.
                 </p>
 
                 <div className="mb-12">
