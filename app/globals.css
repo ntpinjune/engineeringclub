@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  cursor: none;
+  /* Hide default cursor for custom cursor */
+}
+
+a,
+button,
+input,
+textarea,
+label {
+  cursor: none;
+  /* Ensure interactive elements also don't show default cursor */
+}
