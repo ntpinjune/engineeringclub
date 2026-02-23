@@ -6,7 +6,7 @@ const projects = [
         id: "cnc-router",
         title: "CNC Router",
         description: "A computer-controlled cutting machine built from scratch, capable of precision woodworking and metalworking.",
-        image: "/images/cnc-router.png",
+        image: "/images/cnc-router.jpg",
         buttonText: "View Details"
     },
     {

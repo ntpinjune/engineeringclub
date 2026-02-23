@@ -4,13 +4,14 @@ import Footer from "../components/Footer";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { Suspense } from "react";
+import Image from "next/image";
 
 const projects = [
     {
         id: "cnc-router",
         title: "CNC Router",
         description: "A computer-controlled cutting machine built from scratch, capable of precision woodworking and metalworking. This project involves mechanical design, electronics integration, and software configuration to create a versatile manufacturing tool.",
-        image: "/images/cnc-router.png"
+        image: "/images/cnc-router.jpg"
     },
     {
         id: "rc-gokart",
@@ -64,11 +65,7 @@ function ProjectsContent() {
                 {/* Project Detail */}
                 <div className="w-full md:w-2/3">
                     <div className="relative w-full h-[400px] rounded-xl overflow-hidden mb-8 bg-[#171717]">
-                        {/* Placeholder for Project Image */}
-                        <div className="absolute inset-0 flex items-center justify-center text-gray-600">
-                            {/* <Image src={selectedProject.image} alt={selectedProject.title} fill className="object-cover" /> */}
-                            <span>{selectedProject.title} Image</span>
-                        </div>
+                        <Image src={selectedProject.image} alt={selectedProject.title} fill className="object-cover" />
                     </div>
 
                     <h2 className="text-3xl font-bold mb-4">{selectedProject.title}</h2>

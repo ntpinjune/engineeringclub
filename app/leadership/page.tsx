@@ -5,28 +5,42 @@ import Image from "next/image";
 
 const leaders = [
     {
-        name: "Ethan Carter",
+        name: "Kyle Hartunian",
         role: "President",
-        description: "Ethan leads the club with a focus on innovation and collaboration.",
-        image: "/images/ethan.png"
+        image: "/images/kyle.jpg",
+        instagram: "_kyl3_h",
+        linkedin: "https://www.linkedin.com/in/kyle-hartunian"
     },
     {
-        name: "Sophia Bennett",
+        name: "Natasha Sidki",
+        role: "Lead Media Director",
+        image: "/images/natasha.jpg",
+        linkedin: "https://www.linkedin.com/in/natasha-sidki"
+    },
+    {
+        name: "Nolan Colton",
         role: "Media Director",
-        description: "Sophia manages the club's social media presence and public relations.",
-        image: "/images/sophia.png"
+        image: "/images/nolan.png",
+        instagram: "ntpinjune"
     },
     {
-        name: "Liam Harper",
-        role: "Treasurer",
-        description: "Liam manages the club's finances and budget.",
-        image: "/images/liam.png"
+        name: "Luise Haller",
+        role: "Lead Secretary",
+        image: "/images/luise.jpg",
+        linkedin: "https://www.linkedin.com/in/luise-haller-8414bb327/"
     },
     {
-        name: "Olivia Foster",
+        name: "Ashr",
+        role: "Lead Treasurer",
+        image: "/images/ashr.jpg",
+        instagram: "skyoungsten"
+    },
+    {
+        name: "Danielle Mutuc",
         role: "Secretary",
-        description: "Olivia handles club communications and administrative tasks.",
-        image: "/images/olivia.png"
+        image: "/images/danielle.jpg",
+        instagram: "danielle111111111111",
+        linkedin: "https://www.linkedin.com/in/danielle-mutuc-a5230b311"
     }
 ];
 
@@ -45,26 +59,23 @@ export default function LeadershipPage() {
                     {leaders.map((leader, index) => (
                         <div key={index} className="bg-[#171717] p-8 rounded-lg border border-[#262626] flex flex-col items-center text-center">
                             <div className="w-32 h-32 rounded-lg bg-[#262626] mb-6 overflow-hidden relative">
-                                {/* Placeholder for Leader Image */}
-                                <div className="absolute inset-0 flex items-center justify-center text-gray-600">
-                                    {/* <Image src={leader.image} alt={leader.name} fill className="object-cover" /> */}
-                                    <span>{leader.name}</span>
-                                </div>
+                                <Image src={leader.image} alt={leader.name} fill className="object-cover" />
                             </div>
 
                             <h3 className="text-xl font-bold mb-1">{leader.name}</h3>
-                            <p className="text-gray-400 text-sm mb-4">{leader.role}</p>
-                            <p className="text-gray-400 text-sm mb-6 leading-relaxed">
-                                {leader.description}
-                            </p>
+                            <p className="text-gray-400 text-sm mb-6">{leader.role}</p>
 
                             <div className="flex gap-4 mt-auto">
-                                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                                    <Instagram className="w-5 h-5" />
-                                </a>
-                                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                                    <Linkedin className="w-5 h-5" />
-                                </a>
+                                {leader.instagram && (
+                                    <a href={`https://instagram.com/${leader.instagram}`} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                                        <Instagram className="w-5 h-5" />
+                                    </a>
+                                )}
+                                {leader.linkedin && (
+                                    <a href={leader.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                                        <Linkedin className="w-5 h-5" />
+                                    </a>
+                                )}
                             </div>
                         </div>
                     ))}
